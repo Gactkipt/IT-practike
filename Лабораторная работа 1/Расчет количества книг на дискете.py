@@ -1,12 +1,11 @@
 # TODO Найдите количество книг, которое можно разместить на дискете
-A = 25 #Символов в строке
-B = 50 #Строк на странице
-C = 100 #Число страниц
+Characters_per_line = 25 #Символов в строке
+Lines_per_page = 50 #Строк на странице
+Number_of_pages = 100 #Число страниц
 Mg = 1.44
-Bait = (Mg * 1024) * 1024
-Z = round(Bait)
-Symbol = (B*A)*C # Общее количество символов
+Bait = round((Mg * 1024) * 1024)
+Symbol = (Lines_per_page * Characters_per_line) * Number_of_pages # Общее количество символов
 V = Symbol * 4
-Col = Z // V
+Col = Bait // V
 
 print("Количество книг, помещающихся на дискету:", Col)
